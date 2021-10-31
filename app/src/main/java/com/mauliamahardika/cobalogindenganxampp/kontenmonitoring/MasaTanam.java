@@ -87,6 +87,7 @@ public class MasaTanam extends AppCompatActivity {
         Window window = this.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //warna status bar
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.warna_statusbar));
         //get id usernya
         Intent iin= getIntent();
