@@ -47,7 +47,7 @@ public class SuhuUdara extends AppCompatActivity {
     RequestQueue requestQueue;
 
     ImageView back;
-    private static final String URL_BACASUHUUDARA = "https://p3d.himauntika.com/app/bacasuhuudara.php";
+    private static final String URL_BACASUHUUDARA = "https://php2d.himauntika.com/app/bacasuhuudara.php";
     private static final String TAG = SuhuUdara.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -81,7 +81,7 @@ public class SuhuUdara extends AppCompatActivity {
                     }
                 });
             }
-        };timer.scheduleAtFixedRate(tasknew,0,1000);
+        };timer.scheduleAtFixedRate(tasknew,0,100000);
 
 
         back=findViewById(R.id.backarrow);
