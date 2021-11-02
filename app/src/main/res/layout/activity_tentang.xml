@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/lyt1"
-        android:background="@color/warna_statusbar"
+        android:background="@color/hijau_tua"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp">
@@ -65,7 +65,7 @@
                // PENJELASAN ISI APLIKASI
                <TextView
                    android:id="@+id/tv1"
-                   android:background="@color/warna_statusbar"
+                   android:background="@color/hijau_tua"
                    android:textColor="@color/white"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
@@ -319,7 +319,7 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:text="Alat dan Bahan Hidroponik"
-                   android:background="@color/warna_statusbar"
+                   android:background="@color/hijau_tua"
                    android:textColor="@color/white"
                    android:layout_marginTop="20dp"
                    android:textSize="20dp"

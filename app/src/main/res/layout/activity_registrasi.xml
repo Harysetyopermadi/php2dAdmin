@@ -135,7 +135,7 @@
                         android:layout_marginBottom="2dp"
                         android:paddingBottom="16dp"
                         android:text="Daftar"
-                        android:backgroundTint="@color/warna_statusbar"
+                        android:backgroundTint="@color/hijau_tua"
                         android:textColor="#ffffff"
                         app:cornerRadius="24dp"/>
                 </LinearLayout>
@@ -168,7 +168,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
                     android:text="Login Di Sini"
-                    android:backgroundTint="@color/warna_statusbar"
+                    android:backgroundTint="@color/hijau_tua"
                     android:textColor="#ffffff"
                     app:cornerRadius="24dp"/>
             </LinearLayout>

@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:id="@+id/lyt1"
-        android:background="@color/warna_statusbar"
+        android:background="@color/hijau_tua"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp">
@@ -65,7 +65,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/warna_statusbar"
+            android:backgroundTint="@color/hijau_tua"
             android:src="@drawable/ic_baseline_add_24"
             android:layout_height="wrap_content"/>
     </RelativeLayout>

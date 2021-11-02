@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/lyt1"
-        android:background="@color/warna_statusbar"
+        android:background="@color/hijau_tua"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp">
@@ -275,7 +275,7 @@
 
 
 <RelativeLayout
-    android:background="@color/warna_statusbar"
+    android:background="@color/hijau_tua"
     android:id="@+id/lytbuton"
     android:layout_alignParentBottom="true"
     android:layout_width="match_parent"
@@ -290,6 +290,6 @@
         android:layout_height="match_parent"
         android:text="Submit"
         android:backgroundTint="@color/white"
-        android:textColor="@color/warna_statusbar" />
+        android:textColor="@color/hijau_tua" />
 </RelativeLayout>
 </RelativeLayout>
