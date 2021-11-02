@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/ly1"
         android:orientation="vertical"
-        android:background="@drawable/head"
+        android:background="@color/hijau_tua"
         android:layout_width="match_parent"
         android:layout_height="280dp">
     </RelativeLayout>
@@ -47,6 +47,7 @@
                     android:textSize="16sp"
                     android:textColor="@color/white"
                     android:text="User Nama"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>

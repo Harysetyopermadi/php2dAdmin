@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/lyt1"
-        android:background="@color/warna_statusbar"
+        android:background="@color/hijau_tua"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp">
@@ -62,7 +62,7 @@
                     <TextView
                         android:layout_centerHorizontal="true"
                         android:id="@+id/bacasuhuudara"
-                        android:textColor="@color/warna_statusbar"
+                        android:textColor="@color/hijau_tua"
                         android:textSize="30sp"
                         android:text="0"
                         android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                     android:id="@+id/txtcirclesuhuudara"
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
-                    app:cpbProgressColor="@color/warna_statusbar"
+                    app:cpbProgressColor="@color/hijau_tua"
 
                     android:layout_height="match_parent"/>
             </RelativeLayout>
@@ -113,7 +113,7 @@
                     <TextView
                         android:id="@+id/txtstatus"
                         android:paddingTop="5dp"
-                        android:textColor="@color/warna_statusbar"
+                        android:textColor="@color/hijau_tua"
                         android:gravity="center"
                         android:text="Loading"
                         android:textSize="20sp"
@@ -147,7 +147,7 @@
                         <TextView
                             android:id="@+id/txttanggalupdate"
                             android:paddingTop="5dp"
-                            android:textColor="@color/warna_statusbar"
+                            android:textColor="@color/hijau_tua"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="Isinya"
@@ -174,7 +174,7 @@
                         <TextView
                             android:id="@+id/txtjamupdate"
                             android:paddingTop="5dp"
-                            android:textColor="@color/warna_statusbar"
+                            android:textColor="@color/hijau_tua"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="Isinya"
