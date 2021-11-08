@@ -1,11 +1,14 @@
 package com.mauliamahardika.cobalogindenganxampp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -41,6 +44,12 @@ public class registrasi extends AppCompatActivity {
        loginacc=findViewById(R.id.loginakun);
         name=findViewById(R.id.namadaftar);
         password=findViewById(R.id.passworddaftar);
+        //fungsi button
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //warna status bar
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
 
         btndaftar.setOnClickListener(new View.OnClickListener() {
             @Override

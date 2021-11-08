@@ -19,6 +19,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ import com.mauliamahardika.cobalogindenganxampp.kombanslide.FragmentSlider;
 import com.mauliamahardika.cobalogindenganxampp.kombanslide.SliderIndicator;
 import com.mauliamahardika.cobalogindenganxampp.kombanslide.SliderPagerAdapter;
 import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.Kelembapan;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.KolamIkan;
 import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.MasaTanam;
 import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.Nutrisi;
 import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.SuhuAir;
@@ -59,7 +61,8 @@ public class IndexMenu extends AppCompatActivity {
     private LinearLayout mLinearLayout;
     TextView m;
     private static final String TAG = IndexMenu.class.getSimpleName(); //getting the info
-    private LinearLayout btn_logout, masatanam, suhuudara, kelembapan, nutrisi, suhuair, volumeair, tentang;
+    private LinearLayout btn_ikan, masatanam, suhuudara, kelembapan, nutrisi, suhuair, volumeair, tentang;
+    private ImageView btn_logout;
     SessionManager sessionManager;
     String getId;
     // private static String URL_UPLOAD = "http://192.168.0.3/android_register_login/upload.php";
@@ -78,6 +81,7 @@ public class IndexMenu extends AppCompatActivity {
         HashMap<String, String> user = sessionManager.getUserDetail();
         getId = user.get(sessionManager.ID);
         //inisialisasi perangkat
+        btn_ikan=findViewById(R.id.btnikan);
         m = findViewById(R.id.txtnamapenggunaa);
         btn_logout = findViewById(R.id.btnkeluar);
         masatanam = findViewById(R.id.txtmasatanam);
@@ -111,7 +115,7 @@ public class IndexMenu extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //warna status bar
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.warna_statusbar));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.hijau_tua));
 
         //inisialisasi banner
         bannerSlider = findViewById(R.id.sliderView);
@@ -240,6 +244,15 @@ public class IndexMenu extends AppCompatActivity {
                                         }
                                     });
 
+                                    btn_ikan.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i=new Intent(IndexMenu.this, KolamIkan.class);
+                                            i.putExtra("idnya",getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
 
                                     //email.setText(strEmail);
 

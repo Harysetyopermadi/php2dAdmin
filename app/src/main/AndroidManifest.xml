@@ -6,15 +6,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:largeHeap="true"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/p3dlogoadmin"
         android:label="@string/nama_aplikasi"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/p3dlogoadmin"
         android:supportsRtl="true"
         android:theme="@style/gaadabar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".kontenmonitoring.Tentang"></activity>
+        <activity android:name=".kontenmonitoring.KolamIkan"></activity>
+        <activity android:name=".kontenmonitoring.Tentang" />
         <activity android:name=".kontenmonitoring.VolumeAir" />
         <activity android:name=".kontenmonitoring.SuhuAir" />
         <activity android:name=".kontenmonitoring.Nutrisi" />

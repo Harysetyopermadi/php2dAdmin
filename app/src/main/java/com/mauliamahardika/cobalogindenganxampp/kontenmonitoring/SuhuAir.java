@@ -55,7 +55,7 @@ public class SuhuAir extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //warna status bar
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.warna_statusbar));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.hijau_tua));
         //reload untuk komponen
         Timer timer=new Timer();
         TimerTask tasknew=new TimerTask() {

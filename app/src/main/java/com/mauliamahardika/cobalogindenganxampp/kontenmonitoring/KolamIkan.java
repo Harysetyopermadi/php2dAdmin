@@ -28,64 +28,70 @@ import org.json.JSONObject;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class VolumeAir extends AppCompatActivity {
+public class KolamIkan extends AppCompatActivity {
+
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAVOLUMEAIR = "https://php2d.himauntika.com/app/bacavolumeair.php";
+    private static final String URL_BACAVOLUMEPAKAN = "https://php2d.himauntika.com/app/bacavolumepakan.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
-    CircularProgressBar ciclevolumeair;
-    TextView vvolumeair,vstatus,vtglupdate,vjamupdate;
+    CircularProgressBar ciclevolumepakan;
+    TextView vvolumepakan,vstatus,vtglupdate,vjamupdate,vtglupdatepakan,vjamupdatepakan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_volume_air);
-
+        setContentView(R.layout.activity_kolam_ikan);
         //inisialisasi komponennya
-        ciclevolumeair=findViewById(R.id.txtcirclevolumeair);
-        vvolumeair=findViewById(R.id.bacavolumeair);
+        ciclevolumepakan=findViewById(R.id.txtcirclepakanikan);
+        vvolumepakan=findViewById(R.id.bacavolumepakan);
         vstatus=findViewById(R.id.txtstatus);
         vtglupdate=findViewById(R.id.txttanggalupdate);
         vjamupdate=findViewById(R.id.txtjamupdate);
+        vtglupdatepakan=findViewById(R.id.txttanggalupdatepakan);
+        vjamupdatepakan=findViewById(R.id.txtjamupdatepakan);
 
         back=findViewById(R.id.backarrow);
-
-        Window window = this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //warna status bar
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.hijau_tua));
         //reload untuk komponen
         Timer timer=new Timer();
         TimerTask tasknew=new TimerTask() {
             @Override
             public void run() {
-                VolumeAir.this.runOnUiThread(new Runnable() {
+                KolamIkan.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        bacavolumeair();
+                        bacavolumepakan();
                     }
                 });
 
             }
         };timer.scheduleAtFixedRate(tasknew,0,100000);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(VolumeAir.this, IndexMenu.class);
+                Intent i=new Intent(KolamIkan.this, IndexMenu.class);
                 startActivity(i);
                 finish();
             }
         });
+
+
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        //warna status bar
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.hijau_tua));
     }
 
-    private void bacavolumeair() {
+    private void bacavolumepakan() {
+
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         String j = (String) b.get("idnya");
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_BACAVOLUMEAIR,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_BACAVOLUMEPAKAN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -102,10 +108,16 @@ public class VolumeAir extends AppCompatActivity {
                                 String strKelembapan = object.getString("volumeair").trim();
                                 String strTanggal=object.getString("tanggal").trim();
                                 String strJam=object.getString("jam").trim();
-                                vvolumeair.setText(strKelembapan);
-                                ciclevolumeair.setProgressValue(Float.parseFloat(strKelembapan));
+                                String strTanggalupdetpakan=object.getString("tanggalupdatepakan").trim();
+                                String strJamupdatepakan=object.getString("jamupdatepakan").trim();
+
+                                vvolumepakan.setText(strKelembapan);
+                                ciclevolumepakan.setProgressValue(Float.parseFloat(strKelembapan));
                                 vtglupdate.setText(strTanggal);
                                 vjamupdate.setText(strJam);
+                                vtglupdatepakan.setText(strTanggalupdetpakan);
+                                vjamupdatepakan.setText(strJamupdatepakan);
+
 
                                 float a= Float.parseFloat(strKelembapan);
 
@@ -137,16 +149,13 @@ public class VolumeAir extends AppCompatActivity {
         } else {
             requestQueue.add(stringRequest);
         }
-
     }
-
 
     @Override
     public void onBackPressed() {
-
         //  moveTaskToBack(true);
 
-        Intent i=new Intent(VolumeAir.this,IndexMenu.class);
+        Intent i=new Intent(KolamIkan.this, IndexMenu.class);
         startActivity(i);
         finish();
     }

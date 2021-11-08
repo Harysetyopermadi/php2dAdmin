@@ -58,7 +58,7 @@ public class Kelembapan extends AppCompatActivity {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         //warna status bar
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.warna_statusbar));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.hijau_tua));
         //reload untuk komponen
         Timer timer=new Timer();
         TimerTask tasknew=new TimerTask() {

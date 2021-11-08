@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/ly1"
         android:orientation="vertical"
-        android:background="@color/hijau_tua"
+        android:background="@drawable/head"
         android:layout_width="match_parent"
         android:layout_height="280dp">
     </RelativeLayout>
@@ -46,7 +46,7 @@
                     android:textAlignment="viewEnd"
                     android:textSize="16sp"
                     android:textColor="@color/white"
-                    android:text="User Nama"
+                    android:text="Tidak Ada Koneksi"
                     android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -56,13 +56,23 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_weight="6"
+                android:orientation="horizontal"
+                android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:layout_weight="1"
                     android:scaleType="fitCenter"
                     android:id="@+id/fotoakun"
                     android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_margin="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/btnkeluar"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_logout_24"
                     android:layout_margin="7dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -500,7 +510,7 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/btnkeluar"
+                            android:id="@+id/btnikan"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -528,7 +538,7 @@
                                         android:layout_height="match_parent"/>
                                     <ImageView
                                         android:scaleType="fitCenter"
-                                        android:src="@drawable/keluar"
+                                        android:src="@drawable/kolamikan"
                                         android:layout_weight="1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"/>
@@ -550,7 +560,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="3"
                                 android:textSize="11sp"
-                                android:text="Keluar"
+                                android:text="Pakan Ikan"
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </LinearLayout>

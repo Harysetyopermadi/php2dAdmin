@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kontenmonitoring.KolamIkan">
+
+    <LinearLayout
+        android:id="@+id/lyt1"
+        android:background="@color/hijau_tua"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:scaleType="fitCenter"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="Pakan Kolam Ikan"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+
+            android:scaleType="fitCenter"
+            android:layout_margin="5dp"
+            android:src="@drawable/logoheadkiri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"/>
+    </LinearLayout>
+    <ScrollView
+        android:background="#D3D3D3"
+        android:layout_below="@id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#D3D3D3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/bacavolumepakan"
+                        android:textColor="@color/hijau_tua"
+                        android:textSize="30sp"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_below="@id/bacavolumepakan"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="Persen %"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <com.brkckr.circularprogressbar.CircularProgressBar
+                    android:layout_margin="10dp"
+                    android:id="@+id/txtcirclepakanikan"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    app:cpbProgressColor="@color/hijau_tua"
+
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lytatas"
+                android:orientation="vertical"
+                android:layout_below="@id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/colorPrim"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Status"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txtstatus"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/hijau_tua"
+                        android:gravity="center"
+                        android:text="Loading"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tanggal Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txttanggalupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/hijau_tua"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Jam Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txtjamupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/hijau_tua"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrim"
+                            android:text="Waktu Pemberian Pakan Ikan Otomatis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tanggal Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txttanggalupdatepakan"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/hijau_tua"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Jam Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txtjamupdatepakan"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/hijau_tua"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="90dp"
+                android:layout_below="@id/lytatas"
+                android:src="@drawable/logobawahbaru"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
