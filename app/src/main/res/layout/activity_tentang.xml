@@ -87,7 +87,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/gambar_menu_utama"
+                   android:src="@drawable/menu_utama"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -111,7 +111,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/cek_suhu_udara"
+                   android:src="@drawable/suhuudara"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -159,7 +159,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/isi_nutrisi"
+                   android:src="@drawable/cek_nutrisi"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -183,7 +183,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/cek_suhu_air"
+                   android:src="@drawable/suhuair"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -207,7 +207,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/cek_volume_air"
+                   android:src="@drawable/volumeair"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -231,7 +231,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/masa_tanam"
+                   android:src="@drawable/cek_masa_tanam"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -255,7 +255,7 @@
 
                <ImageView
                    android:layout_marginTop="20dp"
-                   android:src="@drawable/isi_masa_tanam"
+                   android:src="@drawable/inputmasatanam"
                    android:layout_gravity="center"
                    android:layout_width="200dp"
                    android:layout_height="200dp"/>
@@ -263,6 +263,29 @@
                <TextView
                    android:layout_marginTop="20dp"
                    android:text="Pada tampilan ini kita dapat mengisi data masa tanam agar mendapat notifikasi saat akan melakukan pindah ke peralon dan prediksi waktu panen. Maka akan memudahkan kita sebagai notifikasi pengingat."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               // TAMPILAN PAKAN IKAN
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Pakan Ikan"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/pakanikan"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Tampilan Pakan Ikan menjelaskan status Normal dan Tidak Normal, apabila berstatus normal atau lebih dari 29% maka pakan ikan sudah cukup. Dan apabila berstatus tidak normal berarti pakan ikan dalam kolam, kurang. Tetapi alat pada pakan ikan di rumah kasa sudah otomatis memberi pakan secara otomatis disaat status pakan ikan tidak normal atau kurang dari 30%."
                    android:justificationMode="inter_word"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"/>
